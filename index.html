@@ -4,46 +4,60 @@
 <head>
   <meta charset="UTF-8">
   <meta name="viewport" content="width=device-width, initial-scale=1.0">
-  <meta name="theme-color" content="#3f4c6b">
-  <title>n-ce projects</title>
-  <style>
-    html,
-    body {
-      height: 100%;
-      margin: 0;
-      padding: 0;
-    }
+  <title>n-ce's projects</title>
+  <link rel="stylesheet" href="style.css">
 
-    body {
-      background-image: linear-gradient(#606c88,#3f4c6b);
-      display: grid;
-      align-items: center;
-      grid-template-columns: auto;
-    }
-
-    a {
-      color:#fffd;
-      text-decoration: none;
-      text-align: center;
-      font-weight:bold;
-      font-size:1.5rem;
-    }
-
-    @media (orientation:landscape) {
-      body {
-        grid-template-columns: auto auto;
-      }
-    }
-  </style>
 </head>
 
 <body>
-  <a href="https://ytify.netlify.app">ytify</a>
-  <a href="https://ytflix.netlify.app">YTFLIX</a>
-  <a href="https://n-ce.github.io/Note/">Note</a>
-  <a href="https://n-ce.github.io/Bromage">Bromage</a>
-  <a href="https://n-ce.github.io/Touch-the-ball">Touch The Ball</a>
-  <a href="https://n-ce.github.io/Archive/">Archive</a>
+  <h1>
+    <span>
+      Hi this is Animesh, i'm a vanilla <p>JS</p> developer and here are some of my projects.
+    </span>
+  </h1>
+  <section>
+    <span style="background-color: #48f3">
+      <a href="https://ytify.netlify.app">ytify</a>
+      <br>
+      <p>An audio streaming tool/front-end for YouTube.</p>
+    </span>
+    <span style="background-color: #f003 ">
+      <a href="https://ytflix.netlify.app">YTFLIX</a>
+      <br>
+      <p>A categorized collection of free entertainment media available on youtube.</p>
+    </span>
+    <span style="background-color:#f707 ">
+      <a href="https://n-ce.github.io/Note/">Note</a>
+      <br>
+      <p>A Note Taking Web App, fully local and serverless.</p>
+    </span>
+    <span style="background-color: #fff5">
+      <a href="https://n-ce.github.io/Bromage">Bromage</a>
+      <br>
+      <p>A Homescreen for the Browser, see daily info in widgets and even comes with several tools and games.</p>
+    </span>
+    <span style="background-color: #f009">
+      <a href="https://n-ce.github.io/Touch-the-ball">Touch The Ball</a>
+      <br>
+      <p>A ball game in pure Javascript.</p>
+    </span>
+    <span style="background-color:#0f73">
+      <a href="https://n-ce.github.io/Archive/">Archive</a>
+      <br>
+      <p>An archive of micro tools, learning projects I made.</p>
+    </span>
+
+  </section>
+  <script>
+    for (const x of document
+        .querySelectorAll('section span')) {
+
+      x.addEventListener('click', () => {
+        open(x.children[0].href)
+        
+      })
+    };
+  </script>
 </body>
 
 </html>
